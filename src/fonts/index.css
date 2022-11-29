@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'Nexa';
+    src: local('Nexa'), url('./nexa/NexaHeavy.woff2') format('woff2');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: local('Nexa'), url('./nexa/NexaHeavyItalic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: local('Nexa'), url('./nexa/NexaXBold.woff2') format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: local('Nexa'), url('./nexa/NexaXBoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: local('Nexa'), url('./nexa/NexaBold.woff2') format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: local('Nexa'), url('./nexa/NexaBoldItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: local('Nexa'), url('./nexa/NexaRegular.woff2') format('woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: local('Nexa'), url('./nexa/NexaRegularItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: local('Nexa'), url('./nexa/NexaLight.woff2') format('woff2');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: local('Nexa'), url('./nexa/NexaLightItalic.woff2') format('woff2');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: local('Nexa'), url('./nexa/NexaThin.woff2') format('woff2');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: local('Nexa'), url('./nexa/NexaThinItalic.woff2') format('woff2');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: local('Helvetica'), url('./helvetica/HelveticaBold.woff2') format('woff2');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: local('Helvetica'), url('./helvetica/HelveticaItalic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: local('Helvetica'), url('./helvetica/HelveticaLight.woff2') format('woff2');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: local('Helvetica'), url('./helvetica/HelveticaLt.woff2') format('woff2');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: local('Helvetica'), url('./helvetica/HelveticaRegular.woff2') format('woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: local('Helvetica'), url('./helvetica/HelveticaSemiMedium.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: local('Helvetica'), url('./helvetica/HelveticaMedium.woff2') format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans'), url('./opensans/OpenSansExtraBold.woff2') format('woff2');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans'), url('./opensans/OpenSansExtraBoldItalic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans'), url('./opensans/OpenSansBold.woff2') format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans'), url('./opensans/OpenSansBoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans'), url('./opensans/OpenSansSemibold.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans'), url('./opensans/OpenSansSemiboldItalic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans'), url('./opensans/OpenSansRegular.woff2') format('woff2');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans'), url('./opensans/OpenSansItalic.woff2') format('woff2');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans'), url('./opensans/OpenSansLight.woff2') format('woff2');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local('OpenSans'), url('./opensans/OpenSansLightItalic.woff2') format('woff2');
+    font-weight: 100;
+    font-style: italic;
+}

@@ -1,0 +1,56 @@
+@import '../../fonts/index.css';
+
+.re-use-label {
+    width: fit-content;
+    font-weight: 200;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.primary {
+        font-family: "Nexa";
+    }
+
+    &.secondary {
+        font-family: "OpenSans";
+    }
+
+    &.paragraph {
+        font-size: 1rem;
+    }
+
+    &.header1 {
+        font-size: 3rem;
+        font-weight: 900;
+    }
+
+    &.header2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    &.header3 {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    &.header4 {
+        font-size: 1.75rem;
+        font-weight: 500;
+    }
+
+    &.header5 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    &.header5 {
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
+
+    &.header6 {
+        font-size: 1.15rem;
+    }
+
+}
