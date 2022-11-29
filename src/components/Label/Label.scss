@@ -1,14 +1,27 @@
-@import '../../fonts/index.css';
+@import '../../assets/fonts/index.css';
 
-.re-use-label {
+.minimal-label {
     width: fit-content;
     font-weight: 200;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-block-end: 0;
 
     &.primary {
         font-family: "Nexa";
+
+        &.paragraph,
+        &.header5,
+        &.header6 {
+            margin-block-start: 0.5rem;
+        }
+
+        &.header1,
+        &.header2,
+        &.header3,
+        &.header4 {
+            margin-block-start: 1rem;
+        }
     }
 
     &.secondary {
@@ -20,37 +33,33 @@
     }
 
     &.header1 {
-        font-size: 3rem;
+        font-size: 6rem;
         font-weight: 900;
     }
 
     &.header2 {
-        font-size: 2.5rem;
+        font-size: 5rem;
         font-weight: 700;
     }
 
     &.header3 {
-        font-size: 2rem;
+        font-size: 4rem;
         font-weight: 500;
     }
 
     &.header4 {
-        font-size: 1.75rem;
+        font-size: 3rem;
         font-weight: 500;
     }
 
     &.header5 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 500;
-    }
-
-    &.header5 {
-        font-size: 1.25rem;
-        font-weight: 300;
     }
 
     &.header6 {
         font-size: 1.15rem;
+        font-weight: 300;
     }
 
 }

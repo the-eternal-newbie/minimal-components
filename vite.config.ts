@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import { VitePluginFonts } from 'vite-plugin-fonts';
 
 export default defineConfig({
     resolve: {
@@ -11,6 +12,7 @@ export default defineConfig({
             '~components': path.resolve(__dirname, './src/components/'),
             '~utils': path.resolve(__dirname, './src/utils/'),
             '~scss': path.resolve(__dirname, './src/scss/'),
+            '~src': path.resolve(__dirname, './src'),
         },
     },
     plugins: [
@@ -23,6 +25,14 @@ export default defineConfig({
             insertTypesEntry: true,
         }),
         tsconfigPaths(),
+        VitePluginFonts({
+            custom: {
+                families: [
+                    { name: 'Nexa', local: 'Nexa', src: './src/assets/fonts/nexa/*.woff2' },
+                    { name: 'OpenSans', local: 'OpenSans', src: './src/assets/fonts/opensans/*.woff2' },
+                ],
+            },
+        }),
     ],
     build: {
         lib: {

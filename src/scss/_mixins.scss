@@ -22,7 +22,7 @@
 
 @mixin theme-colors-outlined {
     color: var(--re-use-color-primary, $re-use-color-primary);
-    border: 1px solid var(--gray-400, $gray-400);
+    border: 1px solid var(--re-use-color-primary, $re-use-color-primary);
     background-color: transparent;
 
     &.disabled {

@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { classNames } from '~utils/ClassNames';
 import './Button.scss';
 
-enum ButtonTypes {
+export enum ButtonTypes {
     TEXT = 'text',
     TONAL = 'tonal',
     FILLED = 'filled',
@@ -13,7 +13,6 @@ enum ButtonTypes {
 export interface IButton extends React.HTMLProps<HTMLDivElement> {
     width?: string;
     height?: string;
-    loading?: boolean;
     disabled?: boolean;
     darkMode?: boolean;
     buttonType?: ButtonTypes;
@@ -21,17 +20,7 @@ export interface IButton extends React.HTMLProps<HTMLDivElement> {
 }
 
 const Button: FC<IButton> = (props: IButton) => {
-    const {
-        children,
-        className,
-        loading,
-        disabled,
-        darkMode,
-        width,
-        height,
-        style,
-        buttonType = ButtonTypes.FILLED,
-    } = props;
+    const { children, className, disabled, darkMode, width, height, style, buttonType = ButtonTypes.FILLED } = props;
 
     const disabledClassName = disabled ? 'disabled' : '';
     const darkClassName = darkMode ? 'dark' : '';
@@ -41,7 +30,7 @@ const Button: FC<IButton> = (props: IButton) => {
 
     return (
         <div {...props} className={baseClassName} style={overrideStyles}>
-            {loading ? <div></div> : children}
+            {children}
         </div>
     );
 };

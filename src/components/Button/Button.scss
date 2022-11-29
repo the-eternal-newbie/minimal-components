@@ -1,12 +1,12 @@
 @import '../../scss/_mixins.scss';
 @import '../../scss/_colors.scss';
 
-.re-use-button {
-    width: auto;
+.minimal-button {
+    width: fit-content;
+    border-radius: 4px;
     display: flex;
     cursor: pointer;
-    padding: 0px 20px;
-    border-radius: 100px;
+    padding: 1.25rem 1.75rem;
     align-items: center;
     justify-content: center;
     user-select: none;
