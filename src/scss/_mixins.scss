@@ -14,7 +14,7 @@
     color: var(--re-use-color-light, $re-use-color-light);
     background-color: var(--re-use-color-primary, $re-use-color-primary);
 
-    &.disabled {
+    &[disabled] {
         color: var(--re-use-color-disabled-secondary, $re-use-color-disabled-secondary);
         background-color: var(--re-use-color-disabled-primary, $re-use-color-disabled-primary);
     }
@@ -25,7 +25,7 @@
     border: 1px solid var(--re-use-color-primary, $re-use-color-primary);
     background-color: transparent;
 
-    &.disabled {
+    &[disabled] {
         color: var(--re-use-color-disabled-secondary, $re-use-color-disabled-secondary);
         border: 1px solid var(--re-use-color-disabled-secondary, $re-use-color-disabled-secondary);
     }

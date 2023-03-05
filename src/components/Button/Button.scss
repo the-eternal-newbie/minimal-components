@@ -6,12 +6,12 @@
     border-radius: 4px;
     display: flex;
     cursor: pointer;
-    padding: 1.25rem 1.75rem;
+    padding: 0.5rem 0.5rem;
     align-items: center;
     justify-content: center;
     user-select: none;
 
-    &.disabled {
+    &[disabled] {
         cursor: not-allowed;
 
         &.filled:hover {
@@ -20,6 +20,14 @@
 
         &.outlined:hover {
             background: none;
+        }
+    }
+
+    &.text {
+        color: var(--re-use-color-primary, $re-use-color-primary);
+
+        &:hover {
+            color: var(--re-use-color-secondary, $re-use-color-secondary);
         }
     }
 

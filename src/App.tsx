@@ -2,20 +2,20 @@ import React from 'react';
 import './App.css';
 
 import { useState } from 'react';
-import { Container, ButtonTypes, Button, Header1, Header2, Label, Navbar } from './components';
+import { Container, Button, Header1, Header2, Label, Navbar } from './components';
 
 function App() {
     const [count, setCount] = useState(0);
 
     return (
         <div className="App">
-            <Navbar>
+            {/* <Navbar>
                 <Container containerType="flex" direction="row">
                     <Label>01. About</Label>
                     <Label>02. Experience</Label>
                     <Label>03. Work</Label>
                     <Label>04. Contact</Label>
-                    <Button buttonType={ButtonTypes.OUTLINED} onClick={() => setCount(count => count + 1)}>
+                    <Button buttonType="outlined" onClick={() => setCount(count => count + 1)}>
                         <Label>Resume</Label>
                     </Button>
                 </Container>
@@ -28,10 +28,24 @@ function App() {
                     I’m a software engineer specializing in building (and occasionally designing) exceptional digital
                     experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.
                 </Label>
-                <Button buttonType={ButtonTypes.OUTLINED} onClick={() => setCount(count => count + 1)}>
+                <Button buttonType="outlined" onClick={() => setCount(count => count + 1)}>
                     <Label>Check out my course {count}!</Label>
                 </Button>
-            </Container>
+            </Container> */}
+
+            <Button buttonType="outlined" darkMode onClick={() => setCount(count => count + 1)}>
+                <Label>Check out my course {count}!</Label>
+            </Button>
+            <Button buttonType="text" darkMode onClick={() => setCount(count => count + 1)}>
+                <Label>Check out my course {count}!</Label>
+            </Button>
+            <Button buttonType="filled" onClick={() => setCount(count => count + 1)}>
+                <Label>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi aspernatur quis corporis at numquam
+                    veniam, perspiciatis sunt recusandae consequatur quas doloribus. Nemo aliquid consequuntur
+                    voluptates fuga iste eaque ullam dicta?
+                </Label>
+            </Button>
         </div>
     );
 }
