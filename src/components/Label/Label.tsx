@@ -3,53 +3,31 @@ import { classNames } from '~utils/ClassNames';
 
 import './Label.scss';
 
+type LabelTypes = 'paragraph' | 'header-1' | 'header-2' | 'header-3' | 'header-4' | 'header-5' | 'header-6';
+
 export interface ILabel extends React.HTMLProps<HTMLHeadingElement> {
     children: ReactNode;
+    type?: LabelTypes;
     textStyle?: 'primary' | 'secondary';
 }
 
-const labelClass = 'label';
+const LabelComponents = {
+    paragraph: (props: ILabel) => <p {...props} />,
+    'header-1': (props: ILabel) => <h1 {...props} />,
+    'header-2': (props: ILabel) => <h2 {...props} />,
+    'header-3': (props: ILabel) => <h3 {...props} />,
+    'header-4': (props: ILabel) => <h4 {...props} />,
+    'header-5': (props: ILabel) => <h5 {...props} />,
+    'header-6': (props: ILabel) => <h6 {...props} />,
+};
 
-const Header1: FC<ILabel> = ({ textStyle = 'primary', ...props }: ILabel) => (
-    <h1 {...props} className={classNames(labelClass, 'header1', textStyle, props.className)}>
-        {props.children}
-    </h1>
-);
+const Label: FC<ILabel> = (props: ILabel) => {
+    const { className, type = 'paragraph', textStyle = 'primary' } = props;
 
-const Header2: FC<ILabel> = ({ textStyle = 'primary', ...props }: ILabel) => (
-    <h2 {...props} className={classNames(labelClass, 'header2', textStyle, props.className)}>
-        {props.children}
-    </h2>
-);
+    const Component = LabelComponents[type];
+    const baseClassName = classNames('label', type, textStyle, className);
 
-const Header3: FC<ILabel> = ({ textStyle = 'primary', ...props }: ILabel) => (
-    <h3 {...props} className={classNames(labelClass, 'header3', textStyle, props.className)}>
-        {props.children}
-    </h3>
-);
+    return <Component className={baseClassName}>{props.children}</Component>;
+};
 
-const Header4: FC<ILabel> = ({ textStyle = 'primary', ...props }: ILabel) => (
-    <h4 {...props} className={classNames(labelClass, 'header4', textStyle, props.className)}>
-        {props.children}
-    </h4>
-);
-
-const Header5: FC<ILabel> = ({ textStyle = 'primary', ...props }: ILabel) => (
-    <h5 {...props} className={classNames(labelClass, 'header5', textStyle, props.className)}>
-        {props.children}
-    </h5>
-);
-
-const Header6: FC<ILabel> = ({ textStyle = 'primary', ...props }: ILabel) => (
-    <h6 {...props} className={classNames(labelClass, 'header6', textStyle, props.className)}>
-        {props.children}
-    </h6>
-);
-
-const Label: FC<ILabel> = ({ textStyle = 'primary', ...props }: ILabel) => (
-    <p {...props} className={classNames(labelClass, 'paragraph', textStyle, props.className)}>
-        {props.children}
-    </p>
-);
-
-export { Header1, Header2, Header3, Header4, Header5, Header6, Label };
+export default Label;

@@ -12,10 +12,12 @@ export interface IButton extends React.HTMLProps<HTMLDivElement> {
 
 const Button: FC<IButton> = (props: IButton) => {
     const { children, className, darkMode, buttonType = 'filled' } = props;
-    const baseClassName = classNames('button', buttonType, className, darkMode ? 'dark' : '');
+
+    const colorScheme = darkMode ? 'dark' : 'light';
+    const baseClassName = classNames('button', buttonType, className);
 
     return (
-        <div {...props} className={baseClassName}>
+        <div {...props} className={baseClassName} style={{ colorScheme }}>
             {children}
         </div>
     );

@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 import { useState } from 'react';
-import { Container, Button, Header1, Header2, Label, Navbar } from './components';
+import { Button, Label } from './components';
 
 function App() {
     const [count, setCount] = useState(0);
@@ -34,7 +34,7 @@ function App() {
             </Container> */}
 
             <Button buttonType="outlined" darkMode onClick={() => setCount(count => count + 1)}>
-                <Label>Check out my course {count}!</Label>
+                <Label type="header-4">Check out my course {count}!</Label>
             </Button>
             <Button buttonType="text" darkMode onClick={() => setCount(count => count + 1)}>
                 <Label>Check out my course {count}!</Label>
