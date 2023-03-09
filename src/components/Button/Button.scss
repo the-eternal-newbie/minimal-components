@@ -31,29 +31,51 @@ $min-dark-sec-color-btn-sc: var(--min-color-secondary-darker, $min-color-seconda
     justify-content: center;
     user-select: none;
     transition: all 0.2s ease-in-out;
+}
 
-    &[disabled] {
-        cursor: not-allowed;
+.minimal-button[disabled],
+.minimal-button.dark[disabled] {
+    cursor: not-allowed;
 
-        &.filled,
-        &.filled:hover {
-            box-shadow: none;
-            color: var(--min-color-disabled-secondary, $min-color-disabled-secondary);
-            background-color: var(--min-color-disabled-primary, $min-color-disabled-primary);
-        }
-
-        &.outlined,
-        &.outlined:hover {
-            background: none;
-            color: var(--min-color-disabled-secondary, $min-color-disabled-secondary);
-            border: 1px solid var(--min-color-disabled-secondary, $min-color-disabled-secondary);
-        }
-
-        &.text,
-        &.text:hover {
-            color: var(--min-color-disabled-secondary, $min-color-disabled-secondary);
-        }
+    &.filled,
+    &.filled:hover,
+    &.filled.secondary,
+    &.filled.secondary:hover {
+        box-shadow: none;
+        color: var(--min-color-disabled-secondary, $min-color-disabled-secondary);
+        background-color: var(--min-color-disabled-primary, $min-color-disabled-primary);
     }
+
+    &.outlined,
+    &.outlined:hover,
+    &.outlined.secondary,
+    &.outlined.secondary:hover {
+        background: none;
+        color: var(--min-color-disabled-secondary, $min-color-disabled-secondary);
+        border: 1px solid var(--min-color-disabled-secondary, $min-color-disabled-secondary);
+    }
+
+    &.text,
+    &.flat,
+    &.elevated,
+    &.text:hover,
+    &.flat:hover,
+    &.elevated:hover,
+    &.text.secondary,
+    &.flat.secondary,
+    &.elevated.secondary,
+    &.text.secondary:hover,
+    &.flat.secondary:hover,
+    &.elevated.secondary:hover {
+        background: none;
+        color: var(--min-color-disabled-secondary, $min-color-disabled-secondary);
+    }
+
+    &.elevated:hover,
+    &.elevated.secondary:hover {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.26);
+    }
+
 }
 
 .minimal-button.filled {
