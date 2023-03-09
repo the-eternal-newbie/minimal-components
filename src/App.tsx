@@ -6,9 +6,10 @@ import { Button, Label } from './components';
 
 function App() {
     const [count, setCount] = useState(0);
+    const [darkMode, setDarkMode] = useState(false);
 
     return (
-        <div className="App">
+        <div className={`App ${darkMode ? 'dark' : ''}`}>
             {/* <Navbar>
                 <Container containerType="flex" direction="row">
                     <Label>01. About</Label>
@@ -32,20 +33,44 @@ function App() {
                     <Label>Check out my course {count}!</Label>
                 </Button>
             </Container> */}
+            <div style={{ border: '1px solid black', padding: '10px' }}>
+                <Button buttonType="outlined" darkMode={darkMode} onClick={() => setCount(count => count + 1)}>
+                    <Label>Check out my course {count}!</Label>
+                </Button>
+                <Button buttonType="text" darkMode={darkMode} onClick={() => setCount(count => count + 1)}>
+                    <Label>Check out my course {count}!</Label>
+                </Button>
+                <Button buttonType="filled" darkMode={darkMode} onClick={() => setDarkMode(prev => !prev)}>
+                    <Label>Toggle dark mode</Label>
+                </Button>
+            </div>
 
-            <Button buttonType="outlined" darkMode onClick={() => setCount(count => count + 1)}>
-                <Label type="header-4">Check out my course {count}!</Label>
-            </Button>
-            <Button buttonType="text" darkMode onClick={() => setCount(count => count + 1)}>
-                <Label>Check out my course {count}!</Label>
-            </Button>
-            <Button buttonType="filled" onClick={() => setCount(count => count + 1)}>
-                <Label>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi aspernatur quis corporis at numquam
-                    veniam, perspiciatis sunt recusandae consequatur quas doloribus. Nemo aliquid consequuntur
-                    voluptates fuga iste eaque ullam dicta?
-                </Label>
-            </Button>
+            <div style={{ border: '1px solid black', padding: '10px', marginTop: '5px' }}>
+                <Button
+                    buttonType="outlined"
+                    darkMode={darkMode}
+                    theme="secondary"
+                    onClick={() => setCount(count => count + 1)}
+                >
+                    <Label>Check out my course {count}!</Label>
+                </Button>
+                <Button
+                    buttonType="text"
+                    darkMode={darkMode}
+                    theme="secondary"
+                    onClick={() => setCount(count => count + 1)}
+                >
+                    <Label>Check out my course {count}!</Label>
+                </Button>
+                <Button
+                    buttonType="filled"
+                    darkMode={darkMode}
+                    theme="secondary"
+                    onClick={() => setDarkMode(prev => !prev)}
+                >
+                    <Label>Toggle dark mode</Label>
+                </Button>
+            </div>
         </div>
     );
 }

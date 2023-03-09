@@ -10,23 +10,13 @@
     }
 }
 
-@mixin theme-colors-filled {
-    color: var(--re-use-color-light, $re-use-color-light);
-    background-color: var(--re-use-color-primary, $re-use-color-primary);
 
-    &[disabled] {
-        color: var(--re-use-color-disabled-secondary, $re-use-color-disabled-secondary);
-        background-color: var(--re-use-color-disabled-primary, $re-use-color-disabled-primary);
+@function get-var($variable, $fallback) {
+    @if variable-exists($variable) {
+        @return $variable;
     }
-}
 
-@mixin theme-colors-outlined {
-    color: var(--re-use-color-primary, $re-use-color-primary);
-    border: 1px solid var(--re-use-color-primary, $re-use-color-primary);
-    background-color: transparent;
-
-    &[disabled] {
-        color: var(--re-use-color-disabled-secondary, $re-use-color-disabled-secondary);
-        border: 1px solid var(--re-use-color-disabled-secondary, $re-use-color-disabled-secondary);
+    @else {
+        @return $fallback;
     }
 }

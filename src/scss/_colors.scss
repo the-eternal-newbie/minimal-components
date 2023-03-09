@@ -15,18 +15,23 @@ $black-300: #6a696b;
 $black-400: #424144;
 $black-500: #1e1d20;
 
-$green-100: #96f1bf;
-$green-200: #7ef3af;
-$green-300: #63f49e;
-$green-400: #45f58a;
-$green-500: #0cf574;
+$pink-100: #fc9cd5;
+$pink-200: #fd87c9;
+$pink-300: #fe6fbc;
+$pink-400: #ff54ae;
+$pink-500: #ff2e9e;
 
 
-$re-use-color-primary: $purple-500;
-$re-use-color-secondary: $green-500;
+$min-color-primary: $purple-500;
+$min-color-primary-dark: $purple-100;
+$min-color-primary-darker: $purple-300;
 
-$re-use-color-dark: $black-500;
-$re-use-color-light: $white-100;
+$min-color-secondary: $pink-500;
+$min-color-secondary-dark: $pink-100;
+$min-color-secondary-darker: $pink-300;
 
-$re-use-color-disabled-primary: $white-300;
-$re-use-color-disabled-secondary: $black-300;
+$min-color-black: $black-500;
+$min-color-white: $white-100;
+
+$min-color-disabled-primary: $white-300;
+$min-color-disabled-secondary: $black-300;

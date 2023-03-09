@@ -13,3 +13,21 @@
 .card {
     padding: 4em;
 }
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.App.dark {
+    background-color: #121212;
+}
