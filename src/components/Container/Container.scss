@@ -1,0 +1,19 @@
+.minimal-container {
+    width: 100%;
+    &.flex {
+        display: flex;
+
+        &.column {
+            flex-direction: column;
+        }
+
+        &.row {
+            flex-direction: row;
+        }
+    }
+
+    &.grid {
+        display: grid;
+        grid-template-areas: "";
+    }
+}

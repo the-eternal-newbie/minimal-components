@@ -2,47 +2,25 @@ import React, { FC } from 'react';
 import { classNames } from '~utils/ClassNames';
 import './Button.scss';
 
-enum ButtonTypes {
-    TEXT = 'text',
-    TONAL = 'tonal',
-    FILLED = 'filled',
-    OUTLINED = 'outlined',
-    ELEVATED = 'elevated',
-}
+type ButtonTypes = 'text' | 'flat' | 'filled' | 'outlined' | 'elevated';
 
-export interface IButton extends React.HTMLProps<HTMLDivElement> {
-    width?: string;
-    height?: string;
-    loading?: boolean;
-    disabled?: boolean;
-    darkMode?: boolean;
+export interface IButton extends React.HTMLProps<HTMLButtonElement> {
     buttonType?: ButtonTypes;
+    darkMode?: boolean;
     style?: React.CSSProperties;
+    theme?: 'primary' | 'secondary';
 }
 
 const Button: FC<IButton> = (props: IButton) => {
-    const {
-        children,
-        className,
-        loading,
-        disabled,
-        darkMode,
-        width,
-        height,
-        style,
-        buttonType = ButtonTypes.FILLED,
-    } = props;
+    const { children, className, darkMode, buttonType = 'filled', theme = 'primary', ...rest } = props;
 
-    const disabledClassName = disabled ? 'disabled' : '';
-    const darkClassName = darkMode ? 'dark' : '';
-
-    const overrideStyles = { width, height, ...style } as React.CSSProperties;
-    const baseClassName = classNames('button', buttonType.toString(), className, disabledClassName, darkClassName);
+    const colorScheme = darkMode ? 'dark' : 'light';
+    const baseClassName = classNames('button', buttonType, colorScheme, theme, className);
 
     return (
-        <div {...props} className={baseClassName} style={overrideStyles}>
-            {loading ? <div></div> : children}
-        </div>
+        <button {...rest} type="button" role="button" className={baseClassName}>
+            {children}
+        </button>
     );
 };
 

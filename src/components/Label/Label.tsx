@@ -1,30 +1,33 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { classNames } from '~utils/ClassNames';
 
 import './Label.scss';
 
-type labelTypes = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
-const labelClasses = {
-    h1: 'header1',
-    h2: 'header2',
-    h3: 'header3',
-    h4: 'header4',
-    h5: 'header5',
-    h6: 'header6',
-    p: 'paragraph',
-};
+type LabelTypes = 'paragraph' | 'header-1' | 'header-2' | 'header-3' | 'header-4' | 'header-5' | 'header-6';
 
-export interface ILabel extends React.HTMLProps<HTMLLabelElement> {
-    children: string;
-    type?: labelTypes;
+export interface ILabel extends React.HTMLProps<HTMLHeadingElement> {
+    children: ReactNode;
+    type?: LabelTypes;
     textStyle?: 'primary' | 'secondary';
 }
 
-const Label: FC<ILabel> = (props: ILabel) => {
-    const { type = 'p', textStyle = 'primary', children, className: _className } = props;
-    const className = classNames('label', textStyle, labelClasses[type], _className);
+const LabelComponents = {
+    paragraph: (props: ILabel) => <p {...props} />,
+    'header-1': (props: ILabel) => <h1 {...props} />,
+    'header-2': (props: ILabel) => <h2 {...props} />,
+    'header-3': (props: ILabel) => <h3 {...props} />,
+    'header-4': (props: ILabel) => <h4 {...props} />,
+    'header-5': (props: ILabel) => <h5 {...props} />,
+    'header-6': (props: ILabel) => <h6 {...props} />,
+};
 
-    return React.createElement(type, { className }, children);
+const Label: FC<ILabel> = (props: ILabel) => {
+    const { className, type = 'paragraph', textStyle = 'primary' } = props;
+
+    const Component = LabelComponents[type];
+    const baseClassName = classNames('label', type, textStyle, className);
+
+    return <Component className={baseClassName}>{props.children}</Component>;
 };
 
 export default Label;

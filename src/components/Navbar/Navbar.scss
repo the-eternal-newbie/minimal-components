@@ -1,0 +1,12 @@
+.minimal-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.scrolled {
+        top: 0;
+        left: 0;
+        position: fixed;
+    }
+}

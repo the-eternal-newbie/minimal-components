@@ -1,2 +1,4 @@
-export { default as Button } from './Button';
-export { default as Label } from './Label/';
+export * from './Button';
+export * from './Container';
+export * from './Label';
+export * from './Navbar';
