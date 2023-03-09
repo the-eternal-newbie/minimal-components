@@ -99,6 +99,8 @@ $min-dark-sec-color-btn-sc: var(--min-color-secondary-darker, $min-color-seconda
     }
 }
 
+.minimal-button.flat,
+.minimal-button.elevated,
 .minimal-button.outlined {
     color: var(--min-color-out-btn, $min-color-out-btn);
     border: 1px solid var(--min-color-out-btn, $min-color-out-btn);
@@ -159,6 +161,8 @@ $min-dark-sec-color-btn-sc: var(--min-color-secondary-darker, $min-color-seconda
     }
 }
 
+.minimal-button.flat.secondary,
+.minimal-button.elevated.secondary,
 .minimal-button.outlined.secondary {
     color: var(--min-color-out-btn-sc, $min-color-out-btn-sc);
     border: 1px solid var(--min-color-out-btn-sc, $min-color-out-btn-sc);
@@ -183,5 +187,28 @@ $min-dark-sec-color-btn-sc: var(--min-color-secondary-darker, $min-color-seconda
         &:active {
             @include safe-transparentize('background', 0.55, --min-color-out-btn-sc, $min-color-out-btn-sc);
         }
+    }
+}
+
+.minimal-button.flat,
+.minimal-button.flat.secondary {
+    border: none;
+
+    &.dark {
+        border: none;
+    }
+}
+
+.minimal-button.elevated,
+.minimal-button.elevated.secondary {
+    border: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.26);
+
+    &:hover {
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.26);
+    }
+
+    &:active {
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     }
 }

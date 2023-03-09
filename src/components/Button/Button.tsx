@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { classNames } from '~utils/ClassNames';
 import './Button.scss';
 
-type ButtonTypes = 'text' | 'tonal' | 'filled' | 'outlined' | 'elevated';
+type ButtonTypes = 'text' | 'flat' | 'filled' | 'outlined' | 'elevated';
 
 export interface IButton extends React.HTMLProps<HTMLButtonElement> {
     buttonType?: ButtonTypes;

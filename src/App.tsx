@@ -40,6 +40,12 @@ function App() {
                 <Button buttonType="text" darkMode={darkMode} onClick={() => setCount(count => count + 1)}>
                     <Label>Check out my course {count}!</Label>
                 </Button>
+                <Button buttonType="flat" darkMode={darkMode} onClick={() => setCount(count => count + 1)}>
+                    <Label>Check out my course {count}!</Label>
+                </Button>
+                <Button buttonType="elevated" darkMode={darkMode} onClick={() => setCount(count => count + 1)}>
+                    <Label>Check out my course {count}!</Label>
+                </Button>
                 <Button buttonType="filled" darkMode={darkMode} onClick={() => setDarkMode(prev => !prev)}>
                     <Label>Toggle dark mode</Label>
                 </Button>
@@ -56,6 +62,22 @@ function App() {
                 </Button>
                 <Button
                     buttonType="text"
+                    darkMode={darkMode}
+                    theme="secondary"
+                    onClick={() => setCount(count => count + 1)}
+                >
+                    <Label>Check out my course {count}!</Label>
+                </Button>
+                <Button
+                    buttonType="flat"
+                    darkMode={darkMode}
+                    theme="secondary"
+                    onClick={() => setCount(count => count + 1)}
+                >
+                    <Label>Check out my course {count}!</Label>
+                </Button>
+                <Button
+                    buttonType="elevated"
                     darkMode={darkMode}
                     theme="secondary"
                     onClick={() => setCount(count => count + 1)}
