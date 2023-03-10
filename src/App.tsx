@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 import { useState } from 'react';
-import { Button, Label } from './components';
+import { Box, Button, Label } from './components';
 
 function App() {
     const [count, setCount] = useState(0);
@@ -10,24 +10,24 @@ function App() {
 
     return (
         <div className={`App ${darkMode ? 'dark' : ''}`}>
-            <div>
+            <Box>
                 <Label darkMode={darkMode} type="header-1">
-                    This is a big header!
+                    Text
                 </Label>
                 <Label darkMode={darkMode} type="header-2">
-                    This is a sub header or a medium headerg
+                    Text
                 </Label>
                 <Label darkMode={darkMode} type="header-3">
-                    This is a sub sub header (a little bit smaller)g
+                    Text
                 </Label>
                 <Label darkMode={darkMode} type="header-4">
-                    This is a small sub header, let's write a larger text for this heheg
+                    Text
                 </Label>
                 <Label darkMode={darkMode} type="header-5">
-                    This is the smallest subheader before a paragraph, so this is a very long text just for testing
+                    Text
                 </Label>
                 <Label darkMode={darkMode} type="header-6">
-                    This is the smallest subheader before a paragraph, so this is a very long text just for testing
+                    Text
                 </Label>
                 <Label darkMode={darkMode}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic beatae, dolor voluptate error tempora
@@ -40,19 +40,19 @@ function App() {
                     consectetur adipisicing elit. Quam accusamus maiores doloremque exercitationem! Dolorum at in ipsam?
                     Reiciendis neque iure, rerum quia possimus facilis, itaque eaque id repellendus maxime libero.
                 </Label>
-            </div>
-            <div>
+            </Box>
+            <Box>
                 <Label darkMode={darkMode} type="header-1" textStyle="secondary">
                     This is a big header!
                 </Label>
                 <Label darkMode={darkMode} type="header-2" textStyle="secondary">
-                    This is a sub header or a medium headerg
+                    This is a sub header or a medium header
                 </Label>
                 <Label darkMode={darkMode} type="header-3" textStyle="secondary">
-                    This is a sub sub header (a little bit smaller)g
+                    This is a sub sub header (a little bit smaller)
                 </Label>
                 <Label darkMode={darkMode} type="header-4" textStyle="secondary">
-                    This is a small sub header, let's write a larger text for this heheg
+                    This is a small sub header, let's write a larger text for this hehe
                 </Label>
                 <Label darkMode={darkMode} type="header-5" textStyle="secondary">
                     This is the smallest subheader before a paragraph, so this is a very long text just for testing
@@ -71,7 +71,7 @@ function App() {
                     consectetur adipisicing elit. Quam accusamus maiores doloremque exercitationem! Dolorum at in ipsam?
                     Reiciendis neque iure, rerum quia possimus facilis, itaque eaque id repellendus maxime libero.
                 </Label>
-            </div>
+            </Box>
             <div style={{ border: '1px solid black', padding: '10px' }}>
                 <Button buttonType="outlined" darkMode={darkMode} onClick={() => setCount(count => count + 1)}>
                     <Label>Check out my course {count}!</Label>
