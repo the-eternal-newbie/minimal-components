@@ -23,7 +23,7 @@ const LabelComponents = {
 };
 
 const Label: FC<ILabel> = (props: ILabel) => {
-    const { className, darkMode, type = 'paragraph', textStyle = 'primary', ...rest } = props;
+    const { children, className, darkMode, type = 'paragraph', textStyle = 'primary', ...rest } = props;
 
     const Component = LabelComponents[type];
     const colorScheme = darkMode ? 'dark' : 'light';
@@ -31,7 +31,7 @@ const Label: FC<ILabel> = (props: ILabel) => {
 
     return (
         <Component {...rest} className={baseClassName}>
-            {props.children}
+            {children}
         </Component>
     );
 };

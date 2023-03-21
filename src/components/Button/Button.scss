@@ -21,7 +21,7 @@ $min-dark-sec-color-btn-sc: var(--min-color-secondary-darker, $min-color-seconda
 .minimal-button {
     border: none;
     background: none;
-
+    height: auto;
     width: fit-content;
     border-radius: 4px;
     display: flex;
