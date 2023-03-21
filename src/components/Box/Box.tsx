@@ -31,7 +31,7 @@ const Box = (props: IBox) => {
     } = props;
 
     const layout = [direction, wrap, alignItems, alignContent, justifyContent, reverse ? 'rev' : ''];
-    const baseClassName = classNames('box', className, direction, ...layout);
+    const baseClassName = classNames('box', className, ...layout);
 
     return (
         <div {...rest} className={baseClassName}>
