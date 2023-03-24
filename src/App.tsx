@@ -10,7 +10,7 @@ function App() {
 	const variants = [
 		{
 			srcVariants: [
-				'https://pixabay.com/get/g72bc20e52609f39e4e1d970cc0feb4be324a8cae7e791ea241e54a06db7dbada0fefc39e06d772f82a877cd39f610208997179ce04c96315a88ebaf409ec1addc9d4d93aebddca4cbc19a044a5343009_640.jpg',
+				'https://pixabay.com/get/g1a284c3983e9dfe56fa0da27f48393fe64e167c7e51a0d48d6ebc0b077d3fcb2c674eb30b89fbfad8f4b767a95be16d07848554ffb70f69897b1ac211d68bd8e607dab76230c93d36e1dee2857d3ace7_640.jpg',
 				'https://pixabay.com/get/g12b295c0817388031e039a55f5cb3c9b28de89f16f1b16f4267eff9c8106cb8e2d59e247d6041c77937f6a04605c20c3241117ad2d38c01e583827fe5269f44a9a54eb1f705ff2b823dcf11fb10fb61a_1280.jpg',
 				'https://pixabay.com/get/g2d56f63466ff694489db66dc06cb4b36eb6863a830e1a2ea86bf4081d141f034816bb180e1a729daf66858768fb54863be9d09ab81a93fc00aebf13704bbfded609cd801391ce6b62109e9d125688825_1920.jpg',
 			],
@@ -190,6 +190,21 @@ function App() {
 				</GridItem>
 			</Grid>
 			<Image variants={variants} />
+			<Image variants={variants} lazy />
+			<Image variants={variants} lazy />
+			<Image variants={variants} lazy />
+			<Image variants={variants} lazy />
+			<Image variants={variants} lazy />
+			<Image variants={variants} lazy />
+			<Image variants={variants} lazy />
+			<Image variants={variants} lazy />
+			<Image variants={variants} lazy />
+			<Image variants={variants} lazy />
+			<Image variants={variants} lazy />
+			<Image variants={variants} lazy />
+			<Image variants={variants} lazy />
+			<Image variants={variants} lazy />
+			<Image variants={variants} lazy />
 		</div>
 	);
 }
