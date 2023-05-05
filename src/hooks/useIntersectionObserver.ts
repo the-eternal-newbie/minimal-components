@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, LegacyRef } from 'react';
 
-type UseIntersectionObserverResult<T extends HTMLElement> = [LegacyRef<T>, boolean];
+export type UseIntersectionObserverResult<T extends HTMLElement> = [LegacyRef<T>, boolean];
 
 export const useIntersectionObserver = <T extends HTMLElement = HTMLElement>(
 	options?: IntersectionObserverInit
