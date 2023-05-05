@@ -3,6 +3,7 @@ import { classNames } from '~utils/ClassNames';
 import { generateSrc } from '~utils/SourceSet';
 
 import './Image.scss';
+import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 
 export interface ISrcSet {
 	srcVariants: string[];
@@ -32,6 +33,8 @@ const Image: FC<Props> = (props: Props) => {
 	const { className, srcSet, sizes, variants, fallback, lazy, alt, ...rest } = props;
 	const [loaded, setLoaded] = useState(false);
 	const [failed, setFailed] = useState(false);
+	const [ref, inView] = useIntersectionObserver<HTMLDivElement>();
+
 	const baseClassName = classNames('image', className, loaded ? 'loaded' : '');
 	const altSrc = fallback ?? 'src/assets/img/placeholder.svg';
 	const useVariants = !!variants && !srcSet && !sizes;
@@ -44,14 +47,20 @@ const Image: FC<Props> = (props: Props) => {
 	const onLoad = () => setLoaded(true);
 
 	return (
-		<picture {...rest} className={baseClassName} onError={onError} onLoad={onLoad}>
-			{failed ? null : useVariants ? (
-				generateSrc(variants).map((image, index) => <source key={index} {...image} />)
-			) : (
-				<source srcSet={srcSet} sizes={sizes} />
-			)}
-			<img src={altSrc} alt={alt} loading={loading} />
-		</picture>
+		<div ref={ref}>
+			{inView ? (
+				<picture {...rest} className={baseClassName} onError={onError} onLoad={onLoad}>
+					{failed ? null : useVariants ? (
+						generateSrc(variants).map((image, index) => (
+							<source key={index} {...image} />
+						))
+					) : (
+						<source srcSet={srcSet} sizes={sizes} />
+					)}
+					<img src={altSrc} alt={alt} loading={loading} />
+				</picture>
+			) : null}
+		</div>
 	);
 };
 

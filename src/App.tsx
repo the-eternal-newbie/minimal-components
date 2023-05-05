@@ -10,9 +10,9 @@ function App() {
 	const variants = [
 		{
 			srcVariants: [
-				'https://pixabay.com/get/g1a284c3983e9dfe56fa0da27f48393fe64e167c7e51a0d48d6ebc0b077d3fcb2c674eb30b89fbfad8f4b767a95be16d07848554ffb70f69897b1ac211d68bd8e607dab76230c93d36e1dee2857d3ace7_640.jpg',
-				'https://pixabay.com/get/g12b295c0817388031e039a55f5cb3c9b28de89f16f1b16f4267eff9c8106cb8e2d59e247d6041c77937f6a04605c20c3241117ad2d38c01e583827fe5269f44a9a54eb1f705ff2b823dcf11fb10fb61a_1280.jpg',
-				'https://pixabay.com/get/g2d56f63466ff694489db66dc06cb4b36eb6863a830e1a2ea86bf4081d141f034816bb180e1a729daf66858768fb54863be9d09ab81a93fc00aebf13704bbfded609cd801391ce6b62109e9d125688825_1920.jpg',
+				'https://pixabay.com/get/gb3e069d314b88cf9a3f9c6cdaf735b6dc45c550448ecd893efcc82feaf55c48c9d869e59c93841a2483313684804ef571b1d83680818767d5ae9876cc02b0f8ea3d3b383beab6b63f9bebcd975b9b7fc_640.jpg',
+				'https://pixabay.com/get/gc0a07c1ed3837ebd6da69631e56a25669fdc70b52f674c20cf7074a06e174540d5dab744bb4de8bab12417dba3484a1116342bd58c45e0bbcfd45957122f0c2e1ea942f3abb35352b720a6654d3b1ccb_1280.jpg',
+				'https://pixabay.com/get/gfdbee312b6c058f83c89c7e8a5e79ee2ccce182825a3102d586291773c9a7a212424d3067700659d74f1e4359ff40774e8aaeb694e1e56fb2cefd7b2db512a98b4471fecccfc10eac2fc569cb4e14387_1920.jpg',
 			],
 			sizeVariants: ['640px', '1280px', '1920px'],
 		},
@@ -189,22 +189,10 @@ function App() {
 					</Button>
 				</GridItem>
 			</Grid>
-			<Image variants={variants} />
-			<Image variants={variants} lazy />
-			<Image variants={variants} lazy />
-			<Image variants={variants} lazy />
-			<Image variants={variants} lazy />
-			<Image variants={variants} lazy />
-			<Image variants={variants} lazy />
-			<Image variants={variants} lazy />
-			<Image variants={variants} lazy />
-			<Image variants={variants} lazy />
-			<Image variants={variants} lazy />
-			<Image variants={variants} lazy />
-			<Image variants={variants} lazy />
-			<Image variants={variants} lazy />
-			<Image variants={variants} lazy />
-			<Image variants={variants} lazy />
+			<Box>
+				<Image variants={variants} />
+				<Image variants={variants} lazy />
+			</Box>
 		</div>
 	);
 }
